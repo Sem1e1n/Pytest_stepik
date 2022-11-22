@@ -16,9 +16,6 @@ def test_find_button_add_book (browser):
     
     
     
-    button = browser.find_element(By.CSS_SELECTOR, ".btn-add-to-basket")
-    button.click()
-    message = browser.find_element(By.CSS_SELECTOR, ".in:nth-child(1) strong")
-    print (message)
-    assert "Coders at Work" in message.text
+
+    assert browser.find_element(By.CSS_SELECTOR, ".btn-add-to-basket"), 'Кнопка добавления товара в корзину отсутсвует'
     time.sleep(3)
